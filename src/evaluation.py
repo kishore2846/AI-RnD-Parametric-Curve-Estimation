@@ -1,11 +1,14 @@
 import numpy as np
+from scipy.spatial import cKDTree
 
 
 def l1_distance(actual_x, actual_y, predicted_x, predicted_y):
 
-    error_x = np.abs(actual_x - predicted_x)
-    error_y = np.abs(actual_y - predicted_y)
+    actual_points = np.column_stack((actual_x, actual_y))
+    predicted_points = np.column_stack((predicted_x, predicted_y))
 
-    total_error = np.mean(error_x + error_y)
+    tree = cKDTree(actual_points)
 
-    return total_error
+    distances, _ = tree.query(predicted_points)
+
+    return np.mean(distances)
