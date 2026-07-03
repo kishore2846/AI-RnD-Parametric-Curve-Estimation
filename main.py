@@ -11,19 +11,20 @@ def plot_curve(points):
 
     plt.figure(figsize=(8, 6))
 
-    plt.plot(
+    plt.scatter(
         points["x"],
         points["y"],
-        linewidth=1
+        s=8,
+        alpha=0.7
     )
 
-    plt.title("Curve from xy_data.csv")
+    plt.title("Given Points")
     plt.xlabel("X")
     plt.ylabel("Y")
 
     plt.grid(True)
 
-    plt.savefig("results/input_curve.png", dpi=300)
+    plt.savefig("results/input_points.png", dpi=300)
 
     plt.show()
 
