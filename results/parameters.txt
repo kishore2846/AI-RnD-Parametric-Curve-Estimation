@@ -1,0 +1,7 @@
+Estimated Parameters
+----------------------
+
+Theta   : 29.999890
+M       : 0.030000
+X Shift : 54.999606
+L1 Error: 0.021239
