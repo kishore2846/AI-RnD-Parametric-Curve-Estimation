@@ -22,3 +22,10 @@ def generate_curve(theta, m, x_shift, t):
     )
 
     return x, y
+
+
+def generate_points(theta, m, x_shift):
+
+    t = np.linspace(6, 60, 1500)
+
+    return generate_curve(theta, m, x_shift, t)
