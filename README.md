@@ -108,3 +108,36 @@ Generated outputs are saved in the `results/` directory.
 - Pandas
 - Matplotlib
 - SciPy
+  
+## Final Estimated Parameters
+
+Theta (degrees): 29.999890
+
+Theta (radians): 0.523597
+
+M: 0.030000
+
+X Shift: 54.999606
+
+L1 Error: 0.021239
+
+
+## Final Parametric Equation (LaTeX)
+
+\left(
+t\cos(0.5236)
+-
+e^{0.03|t|}
+\cdot
+\sin(0.3t)
+\sin(0.5236)
++
+54.9996,
+42+
+t\sin(0.5236)
++
+e^{0.03|t|}
+\cdot
+\sin(0.3t)
+\cos(0.5236)
+\right)
