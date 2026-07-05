@@ -267,8 +267,10 @@ Save Results
 
 # Conclusion
 
-This assignment gave me practical experience in solving an optimization problem rather than simply implementing mathematical equations.
+# Conclusion
 
-I learned how mathematical models can be translated into Python, how optimization algorithms search for unknown variables, and how visualization helps verify the correctness of the implementation.
+This assignment provided practical experience in solving a real parameter estimation problem using mathematical modeling and numerical optimization. Instead of directly implementing the given equations, I followed a complete workflow that included understanding the parametric model, visualizing the dataset, defining an error function, selecting suitable parameter bounds, and optimizing the unknown variables.
 
-The final estimated parameters produced an almost perfect overlap with the original curve, resulting in a very small L1 error of **0.021239**.
+Throughout the implementation, I learned how optimization algorithms can automatically estimate unknown parameters by minimizing an objective function, and how data visualization plays an important role in validating the correctness of the solution.
+
+The optimized parameters produced an almost perfect overlap with the original dataset, resulting in a very small **L1 error of 0.021239**. This indicates that the estimated values of **θ**, **M**, and **X Shift** accurately reconstruct the given parametric curve.
