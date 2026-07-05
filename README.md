@@ -62,6 +62,12 @@ Initially, I plotted the points using a continuous line. However, I observed tha
 
 This visualization step helped me confirm that the curve followed the expected parametric pattern before moving on to mathematical modeling.
 
+### Input Dataset Visualization
+
+The figure below shows the input dataset loaded from the CSV file. Plotting the points helped me understand the overall shape of the curve before implementing the optimization algorithm.
+
+![Input Points](results/input_points.png)
+
 ## Step 3 – Implementing the Mathematical Model
 
 Next I implemented the given parametric equations in Python.
@@ -75,6 +81,12 @@ The model generates X and Y coordinates using:
 Initially I used manually selected parameter values only to verify that my implementation of the equations was correct.
 
 Once the generated curve looked reasonable, I proceeded to optimization.
+
+### Initial Generated Curve
+
+Before starting optimization, I generated a curve using manually selected parameter values. This was done only to verify that the mathematical equations were implemented correctly.
+
+![Initial Curve](results/input_curve.png)
 
 ## Step 4 – Error Function
 
@@ -117,6 +129,12 @@ The comparison graph clearly showed that both curves almost completely overlap. 
 
 The final L1 error was extremely small, indicating that the generated curve is a very close approximation of the original dataset.
 
+### Final Curve Comparison
+
+The figure below compares the original dataset with the optimized curve. The overlap between both curves indicates that the estimated parameters closely match the original curve.
+
+![Final Curve](results/final_curve.png)
+
 ## Step 7 – Saving Results
 
 The final outputs are automatically saved.
@@ -145,27 +163,13 @@ Finally, formatting the final equation for Desmos required additional effort bec
 
 # Final Estimated Parameters
 
-Theta (degrees)
-
-29.999890°
-
-Theta (radians)
-
-0.523597
-
-M
-
-0.030000
-
-X Shift
-
-54.999606
-
-L1 Error
-
-0.021239
-
----
+| Parameter | Estimated Value |
+|-----------|----------------:|
+| Theta (degrees) | 29.999890 |
+| Theta (radians) | 0.523597 |
+| M | 0.030000 |
+| X Shift | 54.999606 |
+| L1 Error | 0.021239 |
 
 # Final Parametric Equation
 
@@ -177,13 +181,13 @@ y(t)=42+t*sin(0.523597)+exp(0.03*abs(t))*sin(0.3*t)*cos(0.523597)
 6 ≤ t ≤ 60
 ```
 
----
+
 
 # Desmos Link
 
 https://www.desmos.com/calculator/q2lld6mfsm
 
----
+
 
 # Project Structure
 
@@ -210,7 +214,7 @@ main.py
 README.md
 ```
 
----
+
 
 # Libraries Used
 
@@ -220,7 +224,31 @@ README.md
 - Matplotlib
 - SciPy
 
----
+## Overall Workflow
+```text
+Load Dataset
+      │
+      ▼
+Visualize Dataset
+      │
+      ▼
+Implement Parametric Model
+      │
+      ▼
+Define L1 Error Function
+      │
+      ▼
+Estimate Parameters using Optimization
+      │
+      ▼
+Generate Final Curve
+      │
+      ▼
+Compare with Original Curve
+      │
+      ▼
+Save Results
+```
 
 # Conclusion
 
