@@ -15,27 +15,36 @@ This assignment combines concepts from mathematics, optimization, data visualiza
 
 # Given Parametric Equation
 
-The curve is defined as
+## Given Parametric Equations
 
-\[
-x(t)=t\cos(\theta)-e^{M|t|}\sin(0.3t)\sin(\theta)+X
-\]
+The parametric curve provided in the assignment is:
 
-\[
-y(t)=42+t\sin(\theta)+e^{M|t|}\sin(0.3t)\cos(\theta)
-\]
+```text
+x(t) = t cos(θ) - e^(M|t|) sin(0.3t) sin(θ) + X
 
-Domain:
+y(t) = 42 + t sin(θ) + e^(M|t|) sin(0.3t) cos(θ)
+```
 
-\[
-6 \le t \le 60
-\]
+### Parameter Range
 
-Unknown parameters:
+```text
+6 ≤ t ≤ 60
 
-- θ
-- M
-- X Shift
+0° < θ < 50°
+
+-0.05 < M < 0.05
+
+0 < X < 100
+```
+
+Where:
+
+- **θ** → Rotation angle (unknown)
+- **M** → Exponential growth parameter (unknown)
+- **X** → Horizontal shift (unknown)
+- **t** → Curve parameter
+
+The objective of this assignment is to estimate the unknown values of **θ**, **M**, and **X** such that the generated curve closely matches the given dataset while minimizing the L1 error.
 
 
 # Thought Process
@@ -133,18 +142,24 @@ The final L1 error was extremely small, indicating that the generated curve is a
 
 The figure below compares the original dataset with the optimized curve. The overlap between both curves indicates that the estimated parameters closely match the original curve.
 
+The optimized curve is plotted together with the original dataset for verification. Due to the very small L1 error (0.021239), the predicted curve almost exactly overlaps the given points. The overlap demonstrates that the estimated parameters accurately reconstruct the original parametric curve. Therefore, the appearance of a single curve is expected and indicates a successful optimization.
+
 ![Final Curve](results/final_curve.png)
 
+Note: The original data points are hidden beneath the predicted curve because both curves overlap almost perfectly after optimization (L1 Error = 0.021239).
 ## Step 7 – Saving Results
 
 The final outputs are automatically saved.
 
 Generated files include:
 
-- input_points.png
-- input_curve.png
-- final_curve.png
-- parameters.txt
+- **input_points.png** – Scatter plot of the original dataset loaded from `xy_data.csv`. This was used to inspect the shape and distribution of the given points before implementing the optimization.
+
+- **input_curve.png** – Curve generated using manually selected parameter values. This helped verify that the mathematical model and parametric equations were implemented correctly before starting optimization.
+
+- **final_curve.png** – Comparison of the optimized parametric curve with the original dataset. The almost complete overlap between the two curves confirms that the estimated parameters accurately reconstruct the given curve.
+
+- **parameters.txt** – Stores the final estimated values of **θ**, **M**, **X Shift**, and the corresponding **L1 error**, making it easy to reproduce and verify the results without rerunning the optimization.
 
 This makes it easy to verify the results without rerunning the optimization.
 
